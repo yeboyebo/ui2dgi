@@ -1,0 +1,260 @@
+{
+  "UI": {
+    "class": "familias",
+    "connections": {
+      "connection": [
+        {
+          "receiver": "tdbArticulos",
+          "sender": "toolButtonInsert",
+          "signal": "clicked()",
+          "slot": "insertRecord()"
+        },
+        {
+          "receiver": "tdbArticulos",
+          "sender": "toolButtonEdit",
+          "signal": "clicked()",
+          "slot": "editRecord()"
+        },
+        {
+          "receiver": "tdbArticulos",
+          "sender": "toolButtonDelete",
+          "signal": "clicked()",
+          "slot": "deleteRecord()"
+        },
+        {
+          "receiver": "tdbArticulos",
+          "sender": "toolButtonZoom",
+          "signal": "clicked()",
+          "slot": "browseRecord()"
+        }
+      ]
+    },
+    "widget": {
+      "class": "QWidget",
+      "property": [
+        {
+          "cstring": "familias",
+          "name": "name"
+        },
+        {
+          "name": "caption",
+          "string": "Familias"
+        }
+      ],
+      "vbox": {
+        "property": [
+          {
+            "cstring": "unnamed",
+            "name": "name"
+          }
+        ],
+        "widget": [
+          {
+            "class": "QFrame",
+            "property": [
+              {
+                "cstring": "frmFamilia",
+                "name": "name"
+              }
+            ],
+            "vbox": {
+              "property": {
+                "cstring": "unnamed",
+                "name": "name"
+              },
+              "widget": {
+                "class": "QLayoutWidget",
+                "hbox": {
+                  "property": {
+                    "cstring": "unnamed",
+                    "name": "name"
+                  },
+                  "widget": [
+                    {
+                      "class": "FLFieldDB",
+                      "property": [
+                        {
+                          "cstring": "fdbCodFamilia",
+                          "name": "name"
+                        },
+                        {
+                          "name": "fieldName",
+                          "string": "codfamilia"
+                        }
+                      ]
+                    },
+                    {
+                      "class": "FLFieldDB",
+                      "property": [
+                        {
+                          "cstring": "fdbDescripcion",
+                          "name": "name"
+                        },
+                        {
+                          "name": "fieldName",
+                          "string": "descripcion"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "property": {
+                  "cstring": "layout1",
+                  "name": "name"
+                }
+              }
+            }
+          },
+          {
+            "class": "QTabWidget",
+            "property": [
+              {
+                "cstring": "tbwArticulos",
+                "name": "name"
+              }
+            ],
+            "widget": {
+              "attribute": {
+                "name": "title",
+                "string": "&Art\u00c3\u00adculos"
+              },
+              "class": "QWidget",
+              "property": {
+                "cstring": "tab",
+                "name": "name"
+              },
+              "vbox": {
+                "property": {
+                  "cstring": "unnamed",
+                  "name": "name"
+                },
+                "widget": [
+                  {
+                    "class": "QFrame",
+                    "hbox": {
+                      "property": [
+                        {
+                          "cstring": "unnamed",
+                          "name": "name"
+                        }
+                      ],
+                      "widget": [
+                        {
+                          "class": "QToolButton",
+                          "property": [
+                            {
+                              "cstring": "toolButtonInsert",
+                              "name": "name"
+                            },
+                            {
+                              "name": "text"
+                            },
+                            {
+                              "name": "toolTip",
+                              "string": "Insertar registro (A)"
+                            },
+                            {
+                              "name": "whatsThis",
+                              "string": "Para crear un nuevo registro en la tabla"
+                            }
+                          ]
+                        },
+                        {
+                          "class": "QToolButton",
+                          "property": [
+                            {
+                              "cstring": "toolButtonEdit",
+                              "name": "name"
+                            },
+                            {
+                              "name": "text"
+                            },
+                            {
+                              "name": "toolTip",
+                              "string": "Modificar registro (M)"
+                            },
+                            {
+                              "name": "whatsThis",
+                              "string": "Para modificar el registro activo de la tabla"
+                            }
+                          ]
+                        },
+                        {
+                          "class": "QToolButton",
+                          "property": [
+                            {
+                              "cstring": "toolButtonDelete",
+                              "name": "name"
+                            },
+                            {
+                              "name": "text"
+                            },
+                            {
+                              "name": "toolTip",
+                              "string": "Eliminar registro (E)"
+                            },
+                            {
+                              "name": "whatsThis",
+                              "string": "Elimina el registro actual de la tabla"
+                            }
+                          ]
+                        },
+                        {
+                          "class": "QToolButton",
+                          "property": [
+                            {
+                              "cstring": "toolButtonZoom",
+                              "name": "name"
+                            },
+                            {
+                              "name": "text"
+                            },
+                            {
+                              "name": "toolTip",
+                              "string": "Ver registro (V)"
+                            },
+                            {
+                              "name": "whatsThis",
+                              "string": "Para ver registro, sin permitir editar"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    "property": [
+                      {
+                        "cstring": "barraBotones",
+                        "name": "name"
+                      }
+                    ]
+                  },
+                  {
+                    "class": "FLTableDB",
+                    "property": [
+                      {
+                        "cstring": "tdbArticulos",
+                        "name": "name"
+                      },
+                      {
+                        "name": "tableName",
+                        "string": "articulos"
+                      },
+                      {
+                        "name": "foreignField",
+                        "string": "codfamilia"
+                      },
+                      {
+                        "name": "fieldRelation",
+                        "string": "codfamilia"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
